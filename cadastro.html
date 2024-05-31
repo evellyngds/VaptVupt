@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
-    <title>Cadastro - VaptVupt</title>
-</head>
-<body>
-    <div class="container">
-        <form class="form-cadastro" action="cadastro" method="POST">
-            <h2>Cadastro</h2>
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Senha</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Cadastrar</button>
-            <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3df637a2f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>VaptVupt</title>
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <div class="logo">
+          <img src="./img/Ativo_4.png" alt="Cupcake" />
+          <h3>VaptVupt</h3>
+        </div>
+        <ul class="list-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Sobre nós</a></li>
+          <li><a href="index.html">Cardápio</a></li>
+          <li><a href="index.html">Contatos</a></li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="carrinho.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+
+        <div class="menu-toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="first-section" id="home">
+      <section class="cadastro" id="cadastro">
+        <h3>Cadastro de clientes</h3>
+        <form id="cadastroForm">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required />
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required />
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required />
+
+            <label for="confirmarSenha">Confirmar Senha:</label>
+            <input
+              type="password"
+              id="confirmarSenha"
+              name="confirmarSenha"
+              required
+            />
+          </div>
+          <button type="submit">Cadastrar</button>
         </form>
-    </div>
-</body>
+      </section>
+    </section>
+    <section class="contatos" id="contatos">
+      <h3>Contatos</h3>
+      <div class="contatos-secao">
+        <div>
+          <i class="fas fa-phone"></i>
+          <span>(99) 99999-9999</span>
+        </div>
+        <div>
+          <i class="fab fa-instagram"></i>
+          <span>@...</span>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h4>© Copyright, Feito por João, Evellyn, Leo, Rafael, Bea</h4>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

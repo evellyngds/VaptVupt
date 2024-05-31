@@ -86,7 +86,7 @@ html {
       rgba(29, 29, 29, 0.8),
       rgba(29, 29, 29, 0.8)
     ),
-    url(./img/fundopizza.jpg);
+    url(./img/background_app_resized.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -436,6 +436,72 @@ footer {
   .contatos-secao div {
     margin: 2rem;
   }
+}
+
+/* Formulários de Login e Cadastro */
+/* Estilização do formulário de cadastro */
+
+.cadastro {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  height: 100%;
+  max-width: 90%; /* Aumentando a largura máxima do formulário */
+  width: 480px; /* Definindo a largura do formulário */
+  margin: 80px auto 0px; /* Ajustando a margem superior para descer o formulário */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffa500; /* Cor amarela */
+  font-family: "Indie Flower", cursive; /* Fonte Indie Flower */
+  font-size: 2.5em; /* Aumentando o tamanho da fonte */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre os elementos */
+}
+
+.form-group label {
+  color: #000000; /* Cor branca para os labels */
+  font-size: 1.2em; /* Aumentando o tamanho da fonte dos labels */
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px; /* Aumentando o padding */
+  font-size: 1.2em; /* Aumentando o tamanho da fonte */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #ffa500; /* Cor amarela no foco */
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 20px;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Adicionando margem inferior de 5 pixels */
+}
+
+button[type="submit"]:hover {
+  background-color: #ff8c00; /* Cor mais escura ao passar o mouse */
 }
 
 @media (max-width: 720px) {
