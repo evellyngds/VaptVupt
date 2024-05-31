@@ -541,7 +541,7 @@ h2 {
   opacity: 0.7;
 }
 .payment-option.selected {
-  border: 2px solid rgba(143, 143, 150, 0.282); /* Adapte conforme desejado */
+  border: 2px solid rgba(143, 143, 150, 0.462); /* Adapte conforme desejado */
 }
 /* Estilos para os detalhes do pagamento */
 #pixForm {
