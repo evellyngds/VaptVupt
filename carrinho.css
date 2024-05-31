@@ -469,6 +469,214 @@ h2 {
 .cart--finalizar:hover {
   background-color: #00000078;
 }
+/* Estilos para o modal de pagamento */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para a seção de escolha de forma de pagamento */
+#paymentOptions {
+  margin-top: 20px;
+}
+
+#paymentOptions h3 {
+  margin-bottom: 10px;
+}
+
+#paymentOptions ul {
+  list-style: none;
+  padding: 0;
+}
+
+#paymentOptions ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.payment-option {
+  height: auto;
+
+  cursor: pointer;
+  width: 50px;
+}
+
+.payment-option:hover {
+  opacity: 0.7;
+}
+.payment-option.selected {
+  border: 2px solid rgba(143, 143, 150, 0.282); /* Adapte conforme desejado */
+}
+/* Estilos para os detalhes do pagamento */
+#pixForm {
+  text-align: center;
+}
+#pixForm h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+#pixForm img {
+  width: 50%;
+  height: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.copy-pix-code-btn {
+  background-color: #29b42b;
+  color: #fff;
+  padding: 10px 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.copy-pix-code-btn:hover {
+  background-color: #107d12;
+}
+
+.copy-pix-code-btn:active {
+  background-color: #53cf55;
+}
+#paymentDetails {
+  margin-top: 20px;
+}
+
+#paymentDetails label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#paymentDetails input[type="text"],
+#paymentDetails input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#paymentDetails input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+#paymentDetails input[type="file"] {
+  border: none;
+  background-color: #f9f9f9;
+}
+
+#paymentDetails input[type="text"]:focus,
+#paymentDetails input[type="file"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+#paymentDetails input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#paymentDetails input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para o botão de confirmar pagamento */
+#paymentForm button[type="submit"] {
+  background-color: #007bff;
+  margin-top: 10px;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+#paymentForm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#paymentDetails,
+#pixForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#paymentDetails select,
+#pixForm select {
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+/* Estilos para centralizar o texto dentro dos inputs e selects */
+#paymentDetails input,
+#paymentDetails select,
+#pixForm input,
+#pixForm select {
+  width: 100%;
+  box-sizing: border-box;
+}
+.payment-option-container {
+  flex-grow: 1;
+  width: 50%;
+  margin-right: 10px;
+}
+.total-purchase {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.total-purchase span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.total-purchase span:last-child {
+  font-weight: bold;
+  color: #000000; /* Cor para destacar o valor total */
+}
 
 @media (max-width: 1000px) {
   .pizza-area {

@@ -136,7 +136,114 @@
     </div>
     <!-- /janela modal .pizzaWindowArea -->
 
+    <!-- Janela modal de pagamento -->
+    <div id="paymentModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Forma de Pagamento</h2>
+        <form id="paymentForm">
+          <!-- Escolha de forma de pagamento -->
+          <div id="paymentOptions">
+            <h3>Escolha a forma de pagamento:</h3>
+            <ul>
+              <li>
+                <img
+                  src="./img/6491bedf22ecf76c03a6c96f_visa-voucher.png"
+                  alt="Visa"
+                  class="payment-option"
+                  data-value="visa"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/ca92ad25f95a302dd20dc163a4f32a6d.png"
+                  alt="Mastercard"
+                  class="payment-option"
+                  data-value="mastercard"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/c6-bank.png"
+                  alt="PagarCasa"
+                  class="payment-option"
+                  data-value="PagarCasa"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/elo.png"
+                  alt="PagarCasa"
+                  class="payment-option"
+                  data-value="PagarCasa"
+                />
+              </li>
+              <li>
+                <img
+                  src="./img/transfeera-blog-pix.jpg"
+                  alt="pix"
+                  id="paymentOptionPix"
+                  class="payment-option"
+                  data-value="pix"
+                />
+              </li>
+            </ul>
+          </div>
+          <!-- Formulário de pagamento PIX -->
+          <div id="pixForm" style="display: none">
+            <h1>QR Code PIX</h1>
+            <li>
+              <img
+                src="./img/Link_pra_pagina_principal_da_Wikipedia-PT_em_codigo_QR_b.svg.png"
+              />
+            </li>
+            <button class="copy-pix-code-btn">
+              Copiar código Pix
+              <span role="img" aria-label="Emoji de cópia">⍈</span>
+            </button>
+          </div>
+
+          <!-- Formulário de pagamento-->
+          <div id="paymentDetails">
+            <label for="cardHolder">Titular do Cartão:</label>
+            <input type="text" id="cardHolder" name="cardHolder" required />
+            <label for="cardNumber">Número do Cartão:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required />
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required />
+
+            <!-- Container para a opção "À vista" -->
+            <div class="payment-option-container">
+              <label for="paymentOptionPagamento">Parcelas</label>
+              <select
+                id="paymentOptionPagamento"
+                name="paymentOptionPagamento"
+                class="payment-option-pagamento"
+                required
+              >
+                <option value="avista">À vista</option>
+                <option value="ate3x">Até 2 Vezes</option>
+                <option value="parcelado">Até 3 Vezes</option>
+              </select>
+            </div>
+
+            <div id="totalDetails"></div>
+            <div id="pixDetails"></div>
+          </div>
+          <div id="totalPurchase" class="total-purchase">
+            <span>Total da Compra:</span>
+            <span>R$ --</span>
+          </div>
+
+          <button type="submit" class="seu-botao-classe">
+            Confirmar Pagamento
+          </button>
+        </form>
+      </div>
+    </div>
+
     <script src="pizzas.js"></script>
     <script src="pizz.js"></script>
+    <script src="payment.js"></script>
   </body>
 </html>
