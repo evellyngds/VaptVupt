@@ -4,7 +4,6 @@ let modalKey = 0;
 let quantPizzas = 1;
 
 let cart = []; // carrinho
-// /aula 05
 
 // funcoes auxiliares ou uteis
 const seleciona = (elemento) => document.querySelector(elemento);
@@ -39,7 +38,7 @@ const botoesFechar = () => {
 };
 
 const preencheDadosDasPizzas = (pizzaItem, item, index) => {
-  // aula 05
+
   // setar um atributo para identificar qual elemento foi clicado
   pizzaItem.setAttribute("data-key", index);
   pizzaItem.querySelector(".pizza-item--img img").src = item.img;
@@ -57,7 +56,6 @@ const preencheDadosModal = (item) => {
   seleciona(".pizzaInfo--actualPrice").innerHTML = formatoReal(item.price[2]);
 };
 
-// aula 05
 const pegarKey = (e) => {
   // .closest retorna o elemento mais proximo que tem a class que passamos
   // do .pizza-item ele vai pegar o valor do atributo data-key
@@ -119,9 +117,7 @@ const mudarQuantidade = () => {
     }
   });
 };
-// /aula 05
 
-// aula 06
 const adicionarNoCarrinho = () => {
   seleciona(".pizzaInfo--addButton").addEventListener("click", () => {
     console.log("Adicionar no carrinho");
@@ -296,7 +292,6 @@ const finalizarCompra = () => {
   });
 };
 
-// /aula 06
 
 // MAPEAR pizzaJson para gerar lista de pizzas
 pizzaJson.map((item, index) => {
@@ -314,9 +309,7 @@ pizzaJson.map((item, index) => {
     e.preventDefault();
     console.log("Clicou na pizza");
 
-    // aula 05
     let chave = pegarKey(e);
-    // /aula 05
 
     // abrir janela modal
     abrirModal();
@@ -324,7 +317,6 @@ pizzaJson.map((item, index) => {
     // preenchimento dos dados
     preencheDadosModal(item);
 
-    // aula 05
     // pegar tamanho selecionado
     preencherTamanhos(chave);
 
@@ -333,20 +325,15 @@ pizzaJson.map((item, index) => {
 
     // selecionar o tamanho e preco com o clique no botao
     escolherTamanhoPreco(chave);
-    // /aula 05
   });
 
   botoesFechar();
 }); // fim do MAPEAR pizzaJson para gerar lista de pizzas
 
-// aula 05
 // mudar quantidade com os botoes + e -
 mudarQuantidade();
-// /aula 05
 
-// aula 06
 adicionarNoCarrinho();
 atualizarCarrinho();
 fecharCarrinho();
 finalizarCompra();
-// /aula 06
